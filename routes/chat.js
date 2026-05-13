@@ -4,6 +4,7 @@ import getResponse from "../utils/openAi.js";
 
 const router = express.Router();
 
+
 // Test route (creates a dummy thread)
 router.post("/test", async (req, res) => {
   try {
