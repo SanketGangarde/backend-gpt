@@ -26,7 +26,7 @@ app.get("/test", (req, res) => {
 
 app.get("/test1", (req, res) => {
   res.json({
-    msg: "test route run successfully"
+    msg: "test1 route run successfully"
   });
 });
 
