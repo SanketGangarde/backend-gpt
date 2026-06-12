@@ -19,8 +19,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/test", (req, res) => {
-  res.send("test was successfull!!!");
+  res.json({
+    msg: "test was successfull!!!"
+  });
 });
+
 
 app.use("/api", chatRoutes);
 
