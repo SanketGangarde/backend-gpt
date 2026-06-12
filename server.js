@@ -24,6 +24,12 @@ app.get("/test", (req, res) => {
   });
 });
 
+app.get("/test1", (req, res) => {
+  res.json({
+    msg: "test route run successfully"
+  });
+});
+
 app.use("/api", chatRoutes);
 
 app.listen(3000, () => {
