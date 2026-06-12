@@ -18,7 +18,13 @@ app.get("/", (req, res) => {
   res.send("API is running");
 });
 
-app.use("/api",chatRoutes);
+app.get("/test", (req, res) => {
+  res.json({
+    msg: "test route run successfully"
+  });
+});
+
+app.use("/api", chatRoutes);
 
 app.listen(3000, () => {
   console.log("Backend is listening on port 3000");
@@ -26,14 +32,14 @@ app.listen(3000, () => {
 });
 
 const connectDb = async () => {
-  try{
-       await mongoose.connect(process.env.MONGODB_URI)
-       .then(console.log("mongodb connected successfully!"));
-  }catch(err) {
-    console.log(err,"mongodb connection failed!");
+  try {
+    await mongoose.connect(process.env.MONGODB_URI)
+      .then(console.log("mongodb connected successfully!"));
+  } catch (err) {
+    console.log(err, "mongodb connection failed!");
   }
 }
- 
+
 
 
 
