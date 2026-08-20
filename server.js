@@ -46,8 +46,8 @@ app.get("/", (req, res) => {
   res.send("Updated  API is running");
 });
 
-app.get("/hello", (req, res) => {
-  res.send("hello replied by api");
+app.get("/hello ", (req, res) => {
+  res.send("updated hello replied by api");
 });
 
 // Routes
