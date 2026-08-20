@@ -43,7 +43,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get("/", (req, res) => {
-  res.send("API is running");
+  res.send("Updated  API is running");
+});
+
+app.get("/hello", (req, res) => {
+  res.send("hello replied by api");
 });
 
 // Routes
