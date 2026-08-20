@@ -47,7 +47,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/hello ", (req, res) => {
-  res.send("updated hello replied by api");
+  res.send("updated 1 hello replied by api");
 });
 
 // Routes
