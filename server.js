@@ -14,9 +14,11 @@ dotenv.config();
 
 const app = express();
 
+const allowedOrigin = (process.env.FRONTEND_URL || process.env.FRONT_END_URL || "http://localhost:5173").replace(/\/+$/, "");
+
 // CORS — allow credentials for session cookies
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: allowedOrigin,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
@@ -46,7 +48,7 @@ app.get("/", (req, res) => {
   res.send("Updated  API is running");
 });
 
-app.get("/hello ", (req, res) => {
+app.get("/hello", (req, res) => {
   res.send("updated 4 hello replied by api");
 });
 
